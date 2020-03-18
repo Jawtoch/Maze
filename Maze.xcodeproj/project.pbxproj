@@ -13,6 +13,11 @@
 		A2167C222416998300712D00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2167C202416998300712D00 /* Main.storyboard */; };
 		A2167C242416998600712D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2167C232416998600712D00 /* Assets.xcassets */; };
 		A2167C272416998600712D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2167C252416998600712D00 /* LaunchScreen.storyboard */; };
+		A2167C30241699E800712D00 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2167C2F241699E800712D00 /* Maze.swift */; };
+		A2167C3224169A1400712D00 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2167C3124169A1400712D00 /* Grid.swift */; };
+		A2167C352416A80E00712D00 /* Noeud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2167C342416A80E00712D00 /* Noeud.swift */; };
+		A2167C372416A83800712D00 /* Connexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2167C362416A83800712D00 /* Connexion.swift */; };
+		A2167C392416A87E00712D00 /* Chemin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2167C382416A87E00712D00 /* Chemin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,12 @@
 		A2167C232416998600712D00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2167C262416998600712D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2167C282416998600712D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2167C2E2416999B00712D00 /* Maze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Maze.entitlements; sourceTree = "<group>"; };
+		A2167C2F241699E800712D00 /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
+		A2167C3124169A1400712D00 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		A2167C342416A80E00712D00 /* Noeud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noeud.swift; sourceTree = "<group>"; };
+		A2167C362416A83800712D00 /* Connexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connexion.swift; sourceTree = "<group>"; };
+		A2167C382416A87E00712D00 /* Chemin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +67,29 @@
 		A2167C192416998300712D00 /* Maze */ = {
 			isa = PBXGroup;
 			children = (
+				A2167C2E2416999B00712D00 /* Maze.entitlements */,
+				A2167C332416A80300712D00 /* Djikstra */,
 				A2167C1A2416998300712D00 /* AppDelegate.swift */,
 				A2167C1C2416998300712D00 /* SceneDelegate.swift */,
 				A2167C1E2416998300712D00 /* ViewController.swift */,
+				A2167C2F241699E800712D00 /* Maze.swift */,
+				A2167C3124169A1400712D00 /* Grid.swift */,
 				A2167C202416998300712D00 /* Main.storyboard */,
 				A2167C232416998600712D00 /* Assets.xcassets */,
 				A2167C252416998600712D00 /* LaunchScreen.storyboard */,
 				A2167C282416998600712D00 /* Info.plist */,
 			);
 			path = Maze;
+			sourceTree = "<group>";
+		};
+		A2167C332416A80300712D00 /* Djikstra */ = {
+			isa = PBXGroup;
+			children = (
+				A2167C342416A80E00712D00 /* Noeud.swift */,
+				A2167C362416A83800712D00 /* Connexion.swift */,
+				A2167C382416A87E00712D00 /* Chemin.swift */,
+			);
+			path = Djikstra;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +165,12 @@
 			files = (
 				A2167C1F2416998300712D00 /* ViewController.swift in Sources */,
 				A2167C1B2416998300712D00 /* AppDelegate.swift in Sources */,
+				A2167C30241699E800712D00 /* Maze.swift in Sources */,
+				A2167C392416A87E00712D00 /* Chemin.swift in Sources */,
+				A2167C3224169A1400712D00 /* Grid.swift in Sources */,
 				A2167C1D2416998300712D00 /* SceneDelegate.swift in Sources */,
+				A2167C372416A83800712D00 /* Connexion.swift in Sources */,
+				A2167C352416A80E00712D00 /* Noeud.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +314,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Maze/Maze.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = R72YBJYJW5;
 				INFOPLIST_FILE = Maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ugocottin.Maze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,7 +335,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Maze/Maze.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = R72YBJYJW5;
 				INFOPLIST_FILE = Maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +346,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ugocottin.Maze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

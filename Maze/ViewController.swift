@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+	
+	private let maze = Maze(gridSize: 5, screenSize: 2560)
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		// Do any additional setup after loading the view.
+		self.view = maze.view
+		
+		//maze.draw(x: 20, y: 20, color: .brown)
+		self.view = maze.view
 	}
-
 
 }
 
